@@ -6,7 +6,7 @@
 	} */
 </script>
 
-<style>
+<!-- <style>
 	main {
 		text-align: center;
 		padding: 1em;
@@ -16,7 +16,7 @@
 	span {
 		color: #09f;
 	}
-</style>
+</style> -->
 
 <Input />
 
