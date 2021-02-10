@@ -1,14 +1,14 @@
 <script>
 	export let initialCounter = 0;
-	let counter = initialCounter
-	const handleClick = () => counter++
+	export let maxCounter = 0;
+	let counter = initialCounter;
+	const handleClick = () => counter++;
+	$: isEvenOrOdd = counter % 2 === 0 ? "Is Even" : "Is Odd";
+	$: if (counter > maxCounter) {
+		console.log("limit exceeded");
+		counter = maxCounter;
+	}
 </script>
-
-<main>
-	<button on:click={handleClick}>Increment</button><br/>
-	<span>[{counter}]</span>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
 
 <style>
 	main {
@@ -31,3 +31,14 @@
 		}
 	}
 </style>
+
+<main>
+	<button on:click={handleClick}>Increment</button><br />
+	<span>[{counter}]</span>
+	<span>{isEvenOrOdd}</span>
+	<p>
+		Visit the
+		<a href="https://svelte.dev/tutorial">Svelte tutorial</a>
+		to learn how to build Svelte apps.
+	</p>
+</main>

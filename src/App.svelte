@@ -1,5 +1,9 @@
 <script>
 	import Counter from './Counter.svelte'
+	import Input from './Input.svelte'
+	/* const commonProps = {
+		maxCounter: 9
+	} */
 </script>
 
 <style>
@@ -14,9 +18,11 @@
 	}
 </style>
 
-<Counter initialCounter={2}/>
-<Counter initialCounter={10}/>
-<Counter />
+<Input />
+
+<!-- <Counter initialCounter={2} {...commonProps}/>
+<Counter initialCounter={10} {...commonProps}/>
+<Counter {...commonProps} />
 <main>
 	<span>We've spans</span>
-</main>
+</main> -->
